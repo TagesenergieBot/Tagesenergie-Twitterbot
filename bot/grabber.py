@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import sys
 import requests
 import re
-from bot import logging, timetool
+from bot import loggingservice, timetool
 
 
 page_link = 'https://tagesenergie.org/energie-des-tages/tagesenergie-am-' + timetool.getf_date() + '/'
@@ -11,7 +11,7 @@ page_link = 'https://tagesenergie.org/energie-des-tages/tagesenergie-am-' + time
 try:
     page_response = requests.get(page_link, timeout=5)
 except Exception as e:
-    logging.log(repr(e), "ConnectionErrors.log")
+    loggingservice.log(repr(e), "ConnectionErrors.log")
     sys.exit(1)
 
 # parse html

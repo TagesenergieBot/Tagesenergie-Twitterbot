@@ -1,6 +1,6 @@
 import tweepy
 
-from bot import timetool, logging, grabber
+from bot import timetool, loggingservice, grabber
 from secret import keys
 
 bot_username = 'Tagesenergie-Twitterbot'
@@ -16,7 +16,7 @@ def create_tweet():
         text = text + "\nEnergie Impulswert:  " + grabber.get_energyimpulsvalue()
         text = text + "\nBewusstwerdungsindex:  " + grabber.get_consiousvalue()
     except AttributeError as ae:
-        logging.log(repr(ae), logfile_name)
+        loggingservice.log(repr(ae), logfile_name)
         text = grabber.get_errortext()
     return text
 
@@ -32,9 +32,9 @@ def tweet(text):
     try:
         api.update_status(text)
     except tweepy.error.TweepError as e:
-        logging.log(repr(e), logfile_name)
+        loggingservice.log(repr(e), logfile_name)
     else:
-        logging.log("Tweeted:\n" + text + "\n", logfile_name)
+        loggingservice.log("Tweeted:\n" + text + "\n", logfile_name)
 
 
 if __name__ == "__main__":
