@@ -5,7 +5,7 @@ import re
 from bot import logging, timetool
 
 
-page_link = 'https://tagesenergie.org/allgemein/energie-des-tages-am-01-04-2018/' #'https://tagesenergie.org/energie-des-tages/tagesenergie-am-' + timetool.getf_date() + '/'
+page_link = 'https://tagesenergie.org/energie-des-tages/tagesenergie-am-' + timetool.getf_date() + '/'
 
 # fetch the content from url
 try:

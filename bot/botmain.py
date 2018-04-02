@@ -3,7 +3,7 @@ import tweepy
 from bot import timetool, logging, grabber
 from secret import keys
 
-bot_username = 'bottest'
+bot_username = 'Tagesenergie-Twitterbot'
 logfile_name = bot_username + ".log"
 
 
