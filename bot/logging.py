@@ -1,5 +1,5 @@
 import os
-from twitterbot import timetool
+from bot import timetool
 
 
 def log(message, logfile_name):

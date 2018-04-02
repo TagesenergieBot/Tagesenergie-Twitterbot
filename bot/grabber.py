@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import sys
 import requests
 import re
-from twitterbot import logging, timetool
+from bot import logging, timetool
 
 
 page_link = 'https://tagesenergie.org/allgemein/energie-des-tages-am-01-04-2018/' #'https://tagesenergie.org/energie-des-tages/tagesenergie-am-' + timetool.getf_date() + '/'

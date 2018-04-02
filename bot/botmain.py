@@ -1,7 +1,7 @@
-import os
 import tweepy
 
-from twitterbot import timetool, logging, keys, grabber
+from bot import timetool, logging, grabber
+from secret import keys
 
 bot_username = 'bottest'
 logfile_name = bot_username + ".log"
