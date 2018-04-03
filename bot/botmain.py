@@ -1,7 +1,7 @@
 import tweepy
 
 from bot import timetool, loggingservice, grabber
-from secret import keys
+from secret import real_keys
 
 bot_username = 'Tagesenergie-Twitterbot'
 logfile_name = bot_username + ".log"
